@@ -277,8 +277,8 @@ DishHistory:Dish
     <coordinates>
       <x>663</x>
       <y>351</y>
-      <w>338</w>
-      <h>130</h>
+      <w>350</w>
+      <h>142</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>182;39;182;78;325;78;325;117;325;78;39;78;39;117</additional_attributes>
@@ -321,11 +321,11 @@ DishHistory:Dish
     <coordinates>
       <x>1092</x>
       <y>1378</y>
-      <w>571</w>
+      <w>519</w>
       <h>155</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>39;39;39;130;494;130;546;39</additional_attributes>
+    <additional_attributes>39;39;39;130;494;130;494;65</additional_attributes>
   </element>
   <element>
     <type>com.baselet.element.old.element.Relation</type>
@@ -378,12 +378,12 @@ DishHistory:Dish
     <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
       <x>1547</x>
-      <y>1378</y>
+      <y>1404</y>
       <w>675</w>
-      <h>259</h>
+      <h>233</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>286;234;650;234;650;130;39;130;91;39</additional_attributes>
+    <additional_attributes>286;208;650;208;650;104;39;104;39;39</additional_attributes>
   </element>
   <element>
     <type>com.baselet.element.old.element.Relation</type>
@@ -454,8 +454,8 @@ fg=red</panel_attributes>
     <coordinates>
       <x>403</x>
       <y>351</y>
-      <w>52</w>
-      <h>260</h>
+      <w>64</w>
+      <h>272</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>39;39;39;247</additional_attributes>
