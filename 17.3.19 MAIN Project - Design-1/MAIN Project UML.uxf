@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>//Uncomment the following line to change the fontsize:
+//fontsize=14
+
+//Welcome to UMLet!
+
+// *Double-click on UML elements to add them to the diagram.
+// *Edit element properties by modifying the text in this panel.
+// *Edit the files in the 'palettes' directory to store your own element palettes.
+// *Press Del or Backspace to remove elements from the diagram.
+// *Hold down Ctrl key to select multiple elements.
+// *Press c to copy the UML diagram to the system clipboard.
+// * This text will be stored with each diagram. Feel free to use the area for notes.
+</help_text>
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1924</x>
+      <y>728</y>
+      <w>273</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>Employe
+--
+-HoursWorked :float
++BankAccount : unsigned int
+-EmployeeNum :unsigned int
+--
++Employe()
++order():void
+-BeenToldToCome():bool
+-StartShift(hoursworked):void
+-EndShift():float
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>715</x>
+      <y>923</y>
+      <w>910</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>GuestCustomer
+--
+
+--
++GuestCustomer()
++order():void
++Register(String firstName, String lastName, String Adress, String Mail, Unsigned int PhoneNum ,Unsigned int Id)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>1157</y>
+      <w>273</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>Menu&lt;&lt;forms&gt;&gt;
+--
+
+--
++menu()
++giveFeedback(feedback)
++pay()
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>598</y>
+      <w>754</w>
+      <h>299</h>
+    </coordinates>
+    <panel_attributes>Dish
+--
++DishName:String
++DishPrice:float
++DishSize:int
++imageOfDish:jpg
++DishDescripation:string
+--
++dish(String DishName,float DishPrice,int DishSize,Jpg ImageOfDish,String DishDescripation)
+&lt;&lt;properties&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>1222</y>
+      <w>533</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>Feedback
+--
++coustemerFeedbek:String
++rateFeedback:int
+--
++feedback(String coustemerFeedbek,int rateFeedback)
++setCustomerFeedback():String 
++EditYourFeedback(String CoustemerFeedback):String
++EditYourFeedback(int rateFeedback):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>338</x>
+      <y>0</y>
+      <w>1157</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>OrderService&lt;queue&gt;
+--
++IdOrder: int.Random
++User : user
++Dish[] : dish
++Customer: customer
+-Pay : pay
++Timer: timer
+SeatOrGo:bool
+
+--
++OrderService(IdOrder int.Random, User user, Dish[] dish, Customer customer,Pay pay,Table int,Timer timer,SearOrGo bool,IfMemberShip)
++OpenMenu()
++SeatOrGo():bool
++IfMemberShip():bool
++CallToEmploye()
++EditDish()
+&lt;&lt;properties&gt;&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>858</x>
+      <y>468</y>
+      <w>273</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>OrderFromResturant
+--
++Table : int
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>468</y>
+      <w>273</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>OrderFromHome
+--
+--
++OrderFromHome()
++InviteTable(Date date):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1326</x>
+      <y>416</y>
+      <w>910</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>User
+--
++FirstName: String
++LastName: String
++Adress: String
++Mail: String
++PhoneNum: Unsigned int
++Id: Unsigned int
+
+--
+User(String firstName, String lastName, String Adress, String Mail, Unsigned int PhoneNum ,Unsigned int Id)
+Login(id unsigned int) : void
+LogOut() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1391</x>
+      <y>1183</y>
+      <w>468</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Report
+--
+
+--
++TotallDayWorked(Date date): float
++WorkerWorkedTime(int worker_Id): float 
++SoldDishes(Date date): int
++CustomerFeedBack(Date date): String
++CustomerRankFeedBack(Date date): int
++TotalDayProfit(Date startDate, Date endDate): float
++TotalDayExpense(Date startDate, Date endDate): float
++numberOfRemainingDish():int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1963</x>
+      <y>962</y>
+      <w>611</w>
+      <h>273</h>
+    </coordinates>
+    <panel_attributes>ManagerService
+--
+
+--
++ManagerService()
++SetMenu(&lt;&lt;properties Menu&gt;&gt;):void
++SetEmloyee(User user,unsigned int bankAccount):void
++RemoreDish(Dish dish , Menu menu):void
++AddDish(Dish dish , Menu menu):void
++DismissEmlployee(Employee e):void
++GetReport(Date date):Report
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1495</x>
+      <y>728</y>
+      <w>273</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>/Customer/
+--
+
+--
+/order():void/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1651</x>
+      <y>936</y>
+      <w>273</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>VipCustomer
+--
+VipPoints : int
+DishHistory:Dish
+--
++VipCustomer()
++order():void
++usePoints(VipPoints p):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>663</x>
+      <y>351</y>
+      <w>338</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>182;39;182;78;325;78;325;117;325;78;39;78;39;117</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1131</x>
+      <y>351</y>
+      <w>389</w>
+      <h>441</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>39;39;39;416;364;416</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1131</x>
+      <y>351</y>
+      <w>220</w>
+      <h>246</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>39;39;39;221;195;221</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>299</y>
+      <w>363</w>
+      <h>688</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>260;663;39;663;39;39;338;39</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1092</x>
+      <y>1378</y>
+      <w>571</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>39;39;39;130;494;130;546;39</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1820</x>
+      <y>1196</y>
+      <w>402</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>39;130;377;130;377;325;338;39</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1521</x>
+      <y>780</y>
+      <w>285</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>117;39;117;104;39;104;260;104;260;182</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>468</x>
+      <y>1534</y>
+      <w>1365</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>StockManagment
+--
++numberOfRemainingDish:int
++burgersRemaining:int
++steakRemaining:int
++pulletRemaining:int
++sodaRemaining:int
++waterRemaining:int
++kolaRemaining:int
+--
++stockManagment(int numberOfRemainingDish,int burgersRemaining,int steakRemaining,int pulletRemaining,int sodaRemaining,int waterRemaining,int kolaRemaining)
+&lt;&lt;properties&gt;&gt;
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1547</x>
+      <y>1378</y>
+      <w>675</w>
+      <h>259</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>286;234;650;234;650;130;39;130;91;39</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1599</x>
+      <y>637</y>
+      <w>415</w>
+      <h>142</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>156;39;156;78;390;78;390;91;390;78;39;78;39;117</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1157</y>
+      <w>377</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>&lt;Form&gt;EmployeService 
+--
+Labels : &lt;&lt;properties orderservice&gt;&gt;
+--
+EmployeService()
+EndShift(Date date,Employe num)
+StartShift(Date date,Employe num)
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>260</x>
+      <y>923</y>
+      <w>273</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+--
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>195</x>
+      <y>1040</y>
+      <w>350</w>
+      <h>142</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>195;39;195;78;325;78;325;117;325;78;39;78;39;117</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1131</x>
+      <y>845</y>
+      <w>493</w>
+      <h>103</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>39;78;39;39;468;39</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>403</x>
+      <y>351</y>
+      <w>52</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>39;39;39;247</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2288</x>
+      <y>1339</y>
+      <w>507</w>
+      <h>273</h>
+    </coordinates>
+    <panel_attributes>Advertisement
+--
+-CompanyName:String
+-ImgPath:String
+-AdverBody: String
+-Active: boolean
+-CreationDate: Date
+-ExpirationDate:Date
+-Price: Float
+--
++Disable():Void
++Enable():Void
++AddToMailingList():Boolean
++removeFromMailingList():Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2249</x>
+      <y>1677</y>
+      <w>325</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>MailingList
+--
+- Subscribers: [ ] VipCustomer
+- DispacherDate: Date
+--
++SendAdvertisements():void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1924</x>
+      <y>1742</y>
+      <w>234</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Smtp
+--
+--
+SendEmail():Void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2561</x>
+      <y>1599</y>
+      <w>156</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;100.0;110.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2145</x>
+      <y>1794</y>
+      <w>260</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;30.0;180.0;30.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1885</x>
+      <y>1105</y>
+      <w>403</w>
+      <h>598</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0;290.0;130.0;290.0;440.0</additional_attributes>
+  </element>
+</diagram>
