@@ -466,22 +466,24 @@ fg=red</panel_attributes>
       <x>2288</x>
       <y>1339</y>
       <w>507</w>
-      <h>273</h>
+      <h>299</h>
     </coordinates>
     <panel_attributes>Advertisement
 --
 -CompanyName:String
 -ImgPath:String
--AdverBody: String
+-AdBody: String
 -Active: boolean
 -CreationDate: Date
 -ExpirationDate:Date
 -Price: Float
+-Url : string
+-MailingList: MailingList
 --
-+Disable():Void
-+Enable():Void
-+AddToMailingList():Boolean
-+removeFromMailingList():Boolean</panel_attributes>
++DisableAd():Void
++EnableAd():Void
++GetAdStatus():String
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -490,15 +492,20 @@ fg=red</panel_attributes>
       <x>2249</x>
       <y>1677</y>
       <w>325</w>
-      <h>130</h>
+      <h>247</h>
     </coordinates>
     <panel_attributes>MailingList
 --
 - Subscribers: [ ] VipCustomer
-- DispacherDate: Date
+- DispacherFrecuency: int
+- Ads:[] Advertisement
+- StartDate: Date
+- EndDate: Date
+
 --
 +SendAdvertisements():void
-
++StartAds():Void
++StopAds():Void
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -506,12 +513,18 @@ fg=red</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1924</x>
-      <y>1742</y>
+      <y>1690</y>
       <w>234</w>
-      <h>104</h>
+      <h>195</h>
     </coordinates>
     <panel_attributes>Smtp
 --
+-MailMessage:string
+-SmtpSever: StmpClient
+-StmpPort: int
+-SmtpUser: string
+-SmtpPass: string
+
 --
 SendEmail():Void</panel_attributes>
     <additional_attributes/>
@@ -520,23 +533,23 @@ SendEmail():Void</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>2561</x>
-      <y>1599</y>
+      <y>1625</y>
       <w>156</w>
-      <h>169</h>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;110.0;100.0;110.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;100.0;90.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>2145</x>
-      <y>1794</y>
-      <w>260</w>
-      <h>65</h>
+      <y>1820</y>
+      <w>143</w>
+      <h>39</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;30.0;180.0;30.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
