@@ -13,71 +13,31 @@
 // *Press c to copy the UML diagram to the system clipboard.
 // * This text will be stored with each diagram. Feel free to use the area for notes.
 </help_text>
-  <zoom_level>13</zoom_level>
+  <zoom_level>12</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1924</x>
-      <y>728</y>
-      <w>273</w>
-      <h>208</h>
+      <x>1776</x>
+      <y>204</y>
+      <w>252</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>Employe
 --
--HoursWorked :float
-+BankAccount : unsigned int
--EmployeeNum :unsigned int
+-ID :float
++BankAccount : string
+-AllTheTimeWorked : float
 --
-+Employe()
-+order():void
--BeenToldToCome():bool
--StartShift(hoursworked):void
--EndShift():float
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>715</x>
-      <y>923</y>
-      <w>910</w>
-      <h>208</h>
-    </coordinates>
-    <panel_attributes>GuestCustomer
---
-
---
-+GuestCustomer()
-+order():void
-+Register(String firstName, String lastName, String Adress, String Mail, Unsigned int PhoneNum ,Unsigned int Id)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>390</x>
-      <y>1157</y>
-      <w>273</w>
-      <h>143</h>
-    </coordinates>
-    <panel_attributes>Menu&lt;&lt;forms&gt;&gt;
---
-
---
-+menu()
-+giveFeedback(feedback)
-+pay()
-fg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>78</x>
-      <y>598</y>
-      <w>754</w>
-      <h>299</h>
+      <x>204</x>
+      <y>396</y>
+      <w>708</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>Dish
 --
@@ -87,386 +47,120 @@ fg=red</panel_attributes>
 +imageOfDish:jpg
 +DishDescripation:string
 --
-+dish(String DishName,float DishPrice,int DishSize,Jpg ImageOfDish,String DishDescripation)
-&lt;&lt;properties&gt;&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>780</x>
-      <y>1222</y>
-      <w>533</w>
-      <h>195</h>
-    </coordinates>
-    <panel_attributes>Feedback
---
-+coustemerFeedbek:String
-+rateFeedback:int
---
-+feedback(String coustemerFeedbek,int rateFeedback)
-+setCustomerFeedback():String 
-+EditYourFeedback(String CoustemerFeedback):String
-+EditYourFeedback(int rateFeedback):int</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>338</x>
-      <y>0</y>
-      <w>1157</w>
-      <h>390</h>
-    </coordinates>
-    <panel_attributes>OrderService&lt;queue&gt;
---
-+IdOrder: int.Random
-+User : user
-+Dish[] : dish
-+Customer: customer
--Pay : pay
-+Timer: timer
-SeatOrGo:bool
-
---
-+OrderService(IdOrder int.Random, User user, Dish[] dish, Customer customer,Pay pay,Table int,Timer timer,SearOrGo bool,IfMemberShip)
-+OpenMenu()
-+SeatOrGo():bool
-+IfMemberShip():bool
-+CallToEmploye()
-+EditDish()
-&lt;&lt;properties&gt;&gt;
-
++Dish()
++Dish(String DishName,float DishPrice,int DishSize,Jpg ImageOfDish,String DishDescripation)
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>858</x>
-      <y>468</y>
-      <w>273</w>
-      <h>91</h>
+      <x>204</x>
+      <y>828</y>
+      <w>504</w>
+      <h>180</h>
     </coordinates>
-    <panel_attributes>OrderFromResturant
+    <panel_attributes>Feedback
 --
-+Table : int
---</panel_attributes>
++customerFeedback:String
++rateFeedback:int
+--
++Feedback(String coustemerFeedbek,int rateFeedback)
++ChangeYourFeedback(string ChangedCustomerFeedback):Void
++ChangeYourRankedFeedback(int ChangedrateFeedback):Void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>572</x>
-      <y>468</y>
-      <w>273</w>
-      <h>104</h>
+      <x>0</x>
+      <y>0</y>
+      <w>864</w>
+      <h>360</h>
     </coordinates>
-    <panel_attributes>OrderFromHome
+    <panel_attributes>OrderService
 --
++IdOrder: int.Random
++User : user
++Dish[] : dishes
++Customer: customer
+-Pay : pay
++Stopwatch: timer
+SeatOrGo:bool
++tableBnum:int
++price:float
++feedBack:FeedBack
++notes:string
+
 --
-+OrderFromHome()
-+InviteTable(Date date):int</panel_attributes>
++OrderService()
++OrderService(User user, List&lt;Dish&gt; dish, Pay pay, string seatOrGo, double Price,Feedback feedback,string notes)
++dishNameFromOrder():string
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1326</x>
-      <y>416</y>
-      <w>910</w>
-      <h>260</h>
+      <x>888</x>
+      <y>0</y>
+      <w>840</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>User
 --
 +FirstName: String
 +LastName: String
-+Adress: String
-+Mail: String
++Address: String
++Email: String
 +PhoneNum: Unsigned int
-+Id: Unsigned int
-
---
-User(String firstName, String lastName, String Adress, String Mail, Unsigned int PhoneNum ,Unsigned int Id)
-Login(id unsigned int) : void
-LogOut() : void
++userType:string
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1391</x>
-      <y>1183</y>
-      <w>468</w>
-      <h>260</h>
-    </coordinates>
-    <panel_attributes>Report
---
-
---
-+TotallDayWorked(Date date): float
-+WorkerWorkedTime(int worker_Id): float 
-+SoldDishes(Date date): int
-+CustomerFeedBack(Date date): String
-+CustomerRankFeedBack(Date date): int
-+TotalDayProfit(Date startDate, Date endDate): float
-+TotalDayExpense(Date startDate, Date endDate): float
-+numberOfRemainingDish():int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1963</x>
-      <y>962</y>
-      <w>611</w>
-      <h>273</h>
-    </coordinates>
-    <panel_attributes>ManagerService
---
-
---
-+ManagerService()
-+SetMenu(&lt;&lt;properties Menu&gt;&gt;):void
-+SetEmloyee(User user,unsigned int bankAccount):void
-+RemoreDish(Dish dish , Menu menu):void
-+AddDish(Dish dish , Menu menu):void
-+DismissEmlployee(Employee e):void
-+GetReport(Date date):Report
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1495</x>
-      <y>728</y>
-      <w>273</w>
-      <h>91</h>
-    </coordinates>
-    <panel_attributes>/Customer/
---
-
---
-/order():void/</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1651</x>
-      <y>936</y>
-      <w>273</w>
-      <h>182</h>
+      <x>1104</x>
+      <y>228</y>
+      <w>252</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>VipCustomer
 --
-VipPoints : int
-DishHistory:Dish
---
-+VipCustomer()
-+order():void
-+usePoints(VipPoints p):void</panel_attributes>
++UserName : string
++PassWord: string</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>663</x>
-      <y>351</y>
-      <w>350</w>
-      <h>142</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>182;39;182;78;325;78;325;117;325;78;39;78;39;117</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>1131</x>
-      <y>351</y>
-      <w>389</w>
-      <h>441</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>39;39;39;416;364;416</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>1131</x>
-      <y>351</y>
-      <w>220</w>
-      <h>246</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>39;39;39;221;195;221</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>0</x>
-      <y>299</y>
-      <w>363</w>
-      <h>688</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>260;663;39;663;39;39;338;39</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>1092</x>
-      <y>1378</y>
-      <w>519</w>
-      <h>155</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>39;39;39;130;494;130;494;65</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>1820</x>
-      <y>1196</y>
-      <w>402</w>
-      <h>350</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>39;130;377;130;377;325;338;39</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>1521</x>
-      <y>780</y>
-      <w>285</w>
-      <h>207</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>117;39;117;104;39;104;260;104;260;182</additional_attributes>
   </element>
   <element>
     <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>468</x>
-      <y>1534</y>
-      <w>1365</w>
-      <h>364</h>
+      <x>204</x>
+      <y>1044</y>
+      <w>204</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>StockManagment
 --
-+numberOfRemainingDish:int
-+burgersRemaining:int
-+steakRemaining:int
-+pulletRemaining:int
-+sodaRemaining:int
-+waterRemaining:int
-+kolaRemaining:int
++burgetStock:int
++steakStock:int
++pulletStock:int
++sodaStock:int
++waterStock:int
++colaStock:int
 --
-+stockManagment(int numberOfRemainingDish,int burgersRemaining,int steakRemaining,int pulletRemaining,int sodaRemaining,int waterRemaining,int kolaRemaining)
-&lt;&lt;properties&gt;&gt;
-
++remainingDishes():int
 
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>1547</x>
-      <y>1404</y>
-      <w>675</w>
-      <h>233</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>286;208;650;208;650;104;39;104;39;39</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>1599</x>
-      <y>637</y>
-      <w>415</w>
-      <h>142</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>156;39;156;78;390;78;390;91;390;78;39;78;39;117</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>1157</y>
-      <w>377</w>
-      <h>156</h>
-    </coordinates>
-    <panel_attributes>&lt;Form&gt;EmployeService 
---
-Labels : &lt;&lt;properties orderservice&gt;&gt;
---
-EmployeService()
-EndShift(Date date,Employe num)
-StartShift(Date date,Employe num)
-fg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Class</type>
-    <coordinates>
-      <x>260</x>
-      <y>923</y>
-      <w>273</w>
-      <h>156</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Form&gt;&gt;
---
-fg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>195</x>
-      <y>1040</y>
-      <w>350</w>
-      <h>142</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>195;39;195;78;325;78;325;117;325;78;39;78;39;117</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>1131</x>
-      <y>845</y>
-      <w>493</w>
-      <h>103</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>39;78;39;39;468;39</additional_attributes>
-  </element>
-  <element>
-    <type>com.baselet.element.old.element.Relation</type>
-    <coordinates>
-      <x>403</x>
-      <y>351</y>
-      <w>64</w>
-      <h>272</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>39;39;39;247</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>2288</x>
-      <y>1339</y>
-      <w>507</w>
-      <h>299</h>
+      <x>1764</x>
+      <y>696</y>
+      <w>192</w>
+      <h>252</h>
     </coordinates>
     <panel_attributes>Advertisement
 --
@@ -478,7 +172,6 @@ fg=red</panel_attributes>
 -ExpirationDate:Date
 -Price: Float
 -Url : string
--MailingList: MailingList
 --
 +DisableAd():Void
 +EnableAd():Void
@@ -489,77 +182,752 @@ fg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2249</x>
-      <y>1677</y>
-      <w>325</w>
-      <h>247</h>
+      <x>1728</x>
+      <y>984</y>
+      <w>300</w>
+      <h>228</h>
     </coordinates>
     <panel_attributes>MailingList
 --
-- Subscribers: [ ] VipCustomer
-- DispacherFrecuency: int
-- Ads:[] Advertisement
-- StartDate: Date
-- EndDate: Date
+- INTERVAL: int
+- Ads: Queue&lt;Advertisement&gt;
++ StartDate : DateTime
++ EndDate: DateTime
++ scheduleState: bool
 
 --
-+SendAdvertisements():void
-+StartAds():Void
-+StopAds():Void
++MailingList(bool enbleAdsCampegin)
++StartMailing(object o):void
++LoadCusomersEmails():void
++ LoadValidAds():Void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>864</y>
+      <w>348</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Mailer
+--
+-smtpPortSrv:string
+-smtpHost: StmpClient
+-smtpUser: int
+-smtpPassSrv: string
+-recieptEmail: string
++message: MailMessage
++smtp: SmtpClient
+--
++EmailAd(Advertisement adToEmail):void
++TestConection(string emailToTest):void
++EmailPassword(string userEmailRecover
++addRecipientsToAd(string Email):void
++SendEmail():void
++LoadClientAndSendEmail():void
++SetHostValuesFromXml()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1924</x>
-      <y>1690</y>
-      <w>234</w>
-      <h>195</h>
+      <x>1464</x>
+      <y>240</y>
+      <w>252</w>
+      <h>48</h>
     </coordinates>
-    <panel_attributes>Smtp
---
--MailMessage:string
--SmtpSever: StmpClient
--StmpPort: int
--SmtpUser: string
--SmtpPass: string
-
---
-SendEmail():Void</panel_attributes>
+    <panel_attributes>Manager
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2561</x>
-      <y>1625</y>
+      <x>1452</x>
+      <y>144</y>
+      <w>36</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>168</y>
+      <w>672</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;540.0;10.0;540.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>624</y>
+      <w>528</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>Pay
+--
++creditCardNumber:string
++threeDigit:string
++expirationDate:string
+--
++Pay(string creditCardNumber,string expirationDate, string threeDigit)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>1056</y>
+      <w>516</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>XmlLoader
+--
+
+--
++CheckIfUserNameExist(string VipCustomerName):bool
++CheckIfVipCustomerExist(string username , string password):bool
++CheckIfManagerExist(string username, string password):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>708</x>
+      <y>1200</y>
+      <w>492</w>
+      <h>396</h>
+    </coordinates>
+    <panel_attributes>XmlParser
+--
+-AppPath:string
+-myDir:DirectoryInfo
+-dataDir:string
+-xmlDishPath:string
++xmlFeedBack:string
++xmlUsers:string
++xmlOrder:string
++xmlAds:string
++xmlSmtpSettings:string
++adTemp:string
++recoverTempl:string
+--
++XmlParserDish(Dish passDish):void
++XmlParserVipCustomer(VipCustomer vip):void
++XmlParserEmployee(Employee crtEmp):void
++XmlParserManager(Manager crtManager):void
++XmlParserAds(Advertisement crtAd):void
++XmlParserOrder(OrderService myOrder):void
++XmlParserFeedback(Feedback myfeedback):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>144</y>
+      <w>228</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>170.0;10.0;170.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1032</x>
+      <y>540</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;LoginScreen&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1032</x>
+      <y>612</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;SignUp&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1140</x>
+      <y>444</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Menu&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1284</x>
+      <y>480</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1476</x>
+      <y>468</y>
+      <w>192</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Main_manager_wnd&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1452</x>
+      <y>384</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Create_ad&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1596</x>
+      <y>384</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Edit_ad&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1728</x>
+      <y>384</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Create_dish&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1728</x>
+      <y>432</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Edit_dish&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1728</x>
+      <y>492</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Create_user&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1728</x>
+      <y>540</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;EditUser&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>972</x>
+      <y>444</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ForgotPass&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1536</x>
+      <y>408</y>
+      <w>36</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1608</x>
+      <y>408</y>
+      <w>36</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1656</x>
+      <y>408</y>
+      <w>96</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>10.0;60.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1656</x>
+      <y>456</y>
+      <w>96</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>10.0;30.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1632</x>
+      <y>492</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1596</x>
+      <y>492</y>
       <w>156</w>
-      <h>143</h>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;110.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>468</y>
+      <w>96</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>564</y>
+      <w>36</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1068</x>
+      <y>468</y>
+      <w>36</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1332</x>
+      <y>348</y>
+      <w>36</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1332</x>
+      <y>348</y>
+      <w>540</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2</panel_attributes>
+    <additional_attributes>10.0;10.0;430.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1836</x>
+      <y>348</y>
+      <w>36</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1668</x>
+      <y>348</y>
+      <w>36</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1500</x>
+      <y>348</y>
+      <w>36</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>396</y>
+      <w>408</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>396</y>
+      <w>36</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1176</x>
+      <y>396</y>
+      <w>36</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>504</y>
+      <w>228</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+group=2</panel_attributes>
+    <additional_attributes>170.0;10.0;170.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1404</x>
+      <y>624</y>
+      <w>192</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;EmployeeViewForm&gt;&gt;
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1332</x>
+      <y>612</y>
+      <w>96</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1224</x>
+      <y>468</y>
+      <w>204</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+group=2</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;150.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>1296</y>
+      <w>372</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>MyTcpListener
+--
+--
++StartListening():void
++GetXMLAsString(XmlDocument myxml):string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1932</x>
+      <y>936</y>
+      <w>36</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;100.0;90.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2145</x>
-      <y>1820</y>
-      <w>143</w>
-      <h>39</h>
+      <x>228</x>
+      <y>348</y>
+      <w>36</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1885</x>
-      <y>1105</y>
-      <w>403</w>
-      <h>598</h>
+      <x>120</x>
+      <y>348</y>
+      <w>108</w>
+      <h>336</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;130.0;290.0;130.0;290.0;440.0</additional_attributes>
+    <additional_attributes>70.0;260.0;10.0;260.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>648</y>
+      <w>108</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>70.0;180.0;10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>996</x>
+      <y>1080</y>
+      <w>72</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>40.0;100.0;40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>540</y>
+      <w>84</w>
+      <h>552</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0;10.0;440.0;50.0;440.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>1164</y>
+      <w>36</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>144</y>
+      <w>252</w>
+      <h>1080</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;610.0;190.0;610.0;190.0;880.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>576</y>
+      <w>192</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;140.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>348</y>
+      <w>96</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1128</x>
+      <y>828</y>
+      <w>660</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>530.0;10.0;10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>696</x>
+      <y>936</y>
+      <w>468</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>948</x>
+      <y>336</y>
+      <w>912</w>
+      <h>348</h>
+    </coordinates>
+    <panel_attributes>User Interface
+bg=red
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>564</y>
+      <w>228</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1596</x>
+      <y>1068</y>
+      <w>156</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1188</x>
+      <y>1200</y>
+      <w>708</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;570.0;100.0;570.0;10.0</additional_attributes>
   </element>
 </diagram>
